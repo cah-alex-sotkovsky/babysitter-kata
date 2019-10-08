@@ -1,4 +1,4 @@
 
 fun parseTimeString(time: String) : Int {
-    return 17
+    return time.first().toString().toInt() + 12
 }
