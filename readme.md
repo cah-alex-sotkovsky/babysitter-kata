@@ -25,3 +25,11 @@ The job:
 
 Deliverable:
 - Calculate total pay, based on babysitter start and end time, and a family.
+
+
+## Running
+`gradlew test`
+
+
+## Notes
+- Because fractional hours are ignored and for simplicity's sake, I'm completely ignoring minutes
