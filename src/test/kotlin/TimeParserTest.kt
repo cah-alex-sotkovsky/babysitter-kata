@@ -29,5 +29,10 @@ class TimeParserTest {
         assertFailsWith(IllegalArgumentException::class) { parseTimeString("3:00") }
     }
 
+    @Test
+    fun timeSuffixCanBeUpperCase() {
+        assertEquals(17, parseTimeString("5:00PM"))
+    }
+
 
 }
