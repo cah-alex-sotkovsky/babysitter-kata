@@ -1,4 +1,5 @@
 import org.junit.Test
+import kotlin.test.assertEquals
 import kotlin.test.assertFailsWith
 
 class BabysitterTest {
@@ -16,6 +17,12 @@ class BabysitterTest {
     @Test
     fun cannotEndBeforeTheStart() {
         assertFailsWith(IllegalArgumentException::class) { calculatePay("7:00pm", "5:00pm", Family()) }
+    }
+
+    @Test
+    fun totalsFlatRateHoursMaxTime() {
+        //It's only $1 per hour, but the house is a mansion with free ice cream
+        assertEquals(11, calculatePay("5:00pm", "4:00am", Family(1)))
     }
 
 }

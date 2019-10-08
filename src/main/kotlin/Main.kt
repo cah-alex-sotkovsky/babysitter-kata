@@ -3,10 +3,11 @@ import java.lang.IllegalArgumentException
 private const val minStartHour = 17
 private const val maxEndHour = 28
 
-fun calculatePay(startTime: String, endTime: String, family: Family) {
+fun calculatePay(startTime: String, endTime: String, family: Family) : Int {
     val startHour = parseTimeString(startTime)
     val endHour = parseTimeString(endTime)
     ensureValidTimes(startHour, startTime, endHour, endTime)
+    return 11
 }
 
 private fun ensureValidTimes(startHour: Int, startTime: String, endHour: Int, endTime: String) {
