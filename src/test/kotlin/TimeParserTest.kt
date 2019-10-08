@@ -34,5 +34,10 @@ class TimeParserTest {
         assertEquals(17, parseTimeString("5:00PM"))
     }
 
+    @Test
+    fun timeMustStandardFormat() {
+        assertFailsWith(IllegalArgumentException::class) { parseTimeString("300pm") }
+    }
+
 
 }
