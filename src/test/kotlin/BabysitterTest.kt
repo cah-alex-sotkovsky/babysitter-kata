@@ -30,4 +30,10 @@ class BabysitterTest {
         assertEquals(4, calculatePay("5:00pm", "7:00pm", Family(2)))
     }
 
+    @Test
+    fun familyAFullHours() {
+        val family = Family(20, mapOf(23 to 15))
+        assertEquals(190, calculatePay("5:00pm", "4:00am", family))
+    }
+
 }

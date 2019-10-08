@@ -50,5 +50,4 @@ class FamilyTest {
         assertEquals(10, family.getPay(20))
     }
 
-
 }
