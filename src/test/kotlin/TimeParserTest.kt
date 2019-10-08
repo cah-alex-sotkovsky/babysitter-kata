@@ -1,5 +1,6 @@
 import org.junit.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertFailsWith
 
 class TimeParserTest {
 
@@ -21,6 +22,11 @@ class TimeParserTest {
     @Test
     fun parsesAMAsNextDay() {
         assertEquals(27, parseTimeString("3:00am"))
+    }
+
+    @Test
+    fun timeMustHaveASuffix() {
+        assertFailsWith(IllegalArgumentException::class) { parseTimeString("3:00") }
     }
 
 
