@@ -2,10 +2,11 @@ class Family(private val baseRate: Int = 0, rules: Map<Int, Int> = mapOf()) {
     private val rules = rules.toSortedMap()
 
     fun getPay(hour: Int): Int {
-        if (rules.isNotEmpty()){
-            val rule = rules.keys.first { hour < it }
-            return rules[rule] ?: baseRate
+        val rule = rules.keys.firstOrNull { hour < it }
+        return if (rule != null) {
+            rules[rule] ?: baseRate
+        } else {
+            baseRate
         }
-        return baseRate
     }
 }

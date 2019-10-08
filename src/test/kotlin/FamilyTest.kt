@@ -41,5 +41,14 @@ class FamilyTest {
         assertEquals(6, family.getPay(16))
     }
 
+    @Test
+    fun whenNoAppropriateRuleUseBasePay(){
+        val rules = mutableMapOf<Int, Int>()
+        rules[18] = 6
+        rules[14] = 5
+        val family = Family(10, rules)
+        assertEquals(10, family.getPay(20))
+    }
+
 
 }
