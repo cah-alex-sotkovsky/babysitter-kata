@@ -4,5 +4,6 @@ fun parseTimeString(time: String): Int {
     } else {
         12
     }
-    return time.first().toString().toInt() + suffixBonus
+    val hour = time.split(":").first().toInt()
+    return hour + suffixBonus
 }

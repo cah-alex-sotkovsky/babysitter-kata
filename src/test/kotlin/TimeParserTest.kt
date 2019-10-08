@@ -14,6 +14,11 @@ class TimeParserTest {
     }
 
     @Test
+    fun parses10PmAs24Hour() {
+        assertEquals(22, parseTimeString("10:00pm"))
+    }
+
+    @Test
     fun parsesAMAsNextDay() {
         assertEquals(27, parseTimeString("3:00am"))
     }
