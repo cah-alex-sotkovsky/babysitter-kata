@@ -1,4 +1,5 @@
-class Family(private val baseRate: Int = 0, private val rules: Map<Int, Int> = mapOf()) {
+class Family(private val baseRate: Int = 0, rules: Map<Int, Int> = mapOf()) {
+    private val rules = rules.toSortedMap()
 
     fun getPay(hour: Int): Int {
         if (rules.isNotEmpty()){

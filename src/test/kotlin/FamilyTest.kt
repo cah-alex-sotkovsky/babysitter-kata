@@ -23,4 +23,13 @@ class FamilyTest {
         assertEquals(5, family.getPay(16))
     }
 
+    @Test
+    fun familyPaysPriceBeforeLowestRuleHour(){
+        val rules = mutableMapOf<Int, Int>()
+        rules[18] = 6
+        rules[17] = 5
+        val family = Family(10, rules)
+        assertEquals(5, family.getPay(16))
+    }
+
 }
