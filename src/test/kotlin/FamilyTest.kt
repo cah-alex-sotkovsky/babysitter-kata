@@ -10,9 +10,17 @@ class FamilyTest {
     }
 
     @Test
-    fun familyPaysFlatRateRegardlessOfHour(){
+    fun familyPaysFlatRateIfNoRuleApplies(){
         val family = Family(10)
         assertEquals(10, family.getPay(10))
+    }
+
+    @Test
+    fun familyPaysPriceBeforeRuleHour(){
+        val rules = mutableMapOf<Int, Int>()
+        rules[17] = 5
+        val family = Family(10, rules)
+        assertEquals(5, family.getPay(16))
     }
 
 }
