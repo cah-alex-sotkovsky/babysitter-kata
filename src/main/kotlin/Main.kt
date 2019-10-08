@@ -7,7 +7,7 @@ fun calculatePay(startTime: String, endTime: String, family: Family) : Int {
     val startHour = parseTimeString(startTime)
     val endHour = parseTimeString(endTime)
     ensureValidTimes(startHour, startTime, endHour, endTime)
-    return 11
+    return (startHour until endHour).sumBy { family.getPay(it) }
 }
 
 private fun ensureValidTimes(startHour: Int, startTime: String, endHour: Int, endTime: String) {

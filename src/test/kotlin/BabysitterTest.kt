@@ -25,4 +25,9 @@ class BabysitterTest {
         assertEquals(11, calculatePay("5:00pm", "4:00am", Family(1)))
     }
 
+    @Test
+    fun totalsFlatRateHoursSmallTimePeriod() {
+        assertEquals(4, calculatePay("5:00pm", "7:00pm", Family(2)))
+    }
+
 }
