@@ -12,4 +12,10 @@ class BabysitterTest {
     fun cannotEndAfter4Am() {
         assertFailsWith(IllegalArgumentException::class) { calculatePay("5:00pm", "5:00am", Family()) }
     }
+
+    @Test
+    fun cannotEndBeforeTheStart() {
+        assertFailsWith(IllegalArgumentException::class) { calculatePay("7:00pm", "5:00pm", Family()) }
+    }
+
 }
