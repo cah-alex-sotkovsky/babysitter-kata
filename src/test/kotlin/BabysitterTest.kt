@@ -48,4 +48,10 @@ class BabysitterTest {
         assertEquals(189, calculatePay("5:00pm", "4:00am", family))
     }
 
+    @Test
+    fun rulesCanBeStrings() {
+        val family = Family.withStringTimes(15, mapOf("9:00pm" to 21))
+        assertEquals(189, calculatePay("5:00pm", "4:00am", family))
+    }
+
 }
