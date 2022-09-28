@@ -27,4 +27,11 @@ class PayCalculatorTest {
         assertEquals(true, actual)
     }
 
+    @Test
+    fun verifyEndTimeAfter4AMReturnsFalse(){
+        val endTime = LocalTime.parse("06:00:00")
+        val actual = verifyValidEndTime(endTime)
+        assertEquals(false, actual)
+    }
+
 }
