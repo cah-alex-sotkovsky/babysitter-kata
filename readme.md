@@ -10,11 +10,11 @@ I want to calculate my nightly charge<br>*
 
 ## Requirements
 The babysitter:
-- starts no earlier than 5:00PM
-- leaves no later than 4:00AM
+~~- starts no earlier than 5:00PM~~ 
+~~- leaves no later than 4:00AM~~
 - only babysits for one family per night
 - gets paid for full hours (no fractional hours)
-- should be prevented from mistakes when entering times (e.g. end time before start time, or outside of allowable work hours)
+~~- should be prevented from mistakes when entering times (e.g. end time before start time, or outside of allowable work hours)~~
 
 The job:
 - Pays different rates for each family (based on bedtimes, kids and pets, etc...)
